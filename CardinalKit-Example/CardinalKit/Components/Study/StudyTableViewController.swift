@@ -108,11 +108,75 @@ extension StudyTableViewController : ORKTaskViewControllerDelegate {
     */
     func taskViewController(_ taskViewController: ORKTaskViewController, didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
         
-        // TODO: make configurable; document how files are sent and stored.
         
+        let alertTitle = "Attention"
+        var alertMessage = ""
+        
+        let yellowMessage = "You should contact your doctor today".capitalized
+        let orangeMessage = "You should contact your doctor right away".capitalized
+        let redMessage = "Call 911 right away".capitalized
+        
+        // TODO: make configurable; document how files are sent and stored.
+        let taskResults = taskViewController.result
+        guard let results = taskResults.results else {
+            return
+        }
+        
+        for result in results {
+            guard let stepResult = result as? ORKStepResult else {
+              continue
+            }
+            guard let stepResults = stepResult.results else {
+                continue
+            }
+            
+            if stepResults.count == 0 {
+              continue
+            }
+
+            guard let boolQuestionResult = stepResults[0] as? ORKBooleanQuestionResult else {
+              continue
+            }
+            
+            let identifier = boolQuestionResult.identifier
+            let answer = boolQuestionResult.booleanAnswer!.boolValue
+            print("\(identifier): \(answer)")
+            
+            if answer == true {
+                if identifier == "activeQuestionStep" {
+                    if alertMessage != redMessage && alertMessage != orangeMessage {
+                        alertMessage = yellowMessage
+                    }
+                } else if identifier == "restingQuestionStep" {
+                    if alertMessage != redMessage {
+                        alertMessage = orangeMessage
+                    }
+                } else if identifier == "awayQuestionStep" {
+                    alertMessage = redMessage
+                } else if identifier == "gainedQuestionStep" {
+                    if alertMessage != redMessage && alertMessage != orangeMessage {
+                        alertMessage = yellowMessage
+                    }
+                } else if identifier == "pillowsQuestionStep" {
+                    if alertMessage != redMessage && alertMessage != orangeMessage {
+                        alertMessage = yellowMessage
+                    }
+                } else if identifier == "wakeQuestionStep" {
+                    if alertMessage != redMessage {
+                        alertMessage = orangeMessage
+                    }
+                } else if identifier == "passOutQuestionStep" {
+                    alertMessage = redMessage
+                }
+
+            }
+                        
+        }
+
         do {
             // (1) convert the result of the ResearchKit task into a JSON dictionary
             if let json = try CKTaskResultAsJson(taskViewController.result) {
+            
                 
                 // (2) send using Firebase
                 try CKSendJSON(json)
@@ -127,7 +191,14 @@ extension StudyTableViewController : ORKTaskViewControllerDelegate {
         }
         
         // (4) we must dismiss the task when we are done with it, otherwise we will be stuck.
-        taskViewController.dismiss(animated: true, completion: nil)
+        taskViewController.dismiss(animated: true, completion: {
+            if alertMessage != ""{
+                let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+          
+        })
     }
     
 }
