@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import CareKit
+//import CareKit
 
 class DashboardViewController: UIViewController {
 

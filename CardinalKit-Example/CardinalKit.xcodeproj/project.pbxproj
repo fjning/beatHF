@@ -3,13 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		55346BD3250DBFBF00767347 /* CareKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = 55346BD2250DBFBF00767347 /* CareKitUI */; };
-		55346BD5250DBFBF00767347 /* CareKit in Frameworks */ = {isa = PBXBuildFile; productRef = 55346BD4250DBFBF00767347 /* CareKit */; };
-		55346BD7250DBFBF00767347 /* CareKitStore in Frameworks */ = {isa = PBXBuildFile; productRef = 55346BD6250DBFBF00767347 /* CareKitStore */; };
 		55672439250DAE6900A5E96F /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55672438250DAE6900A5E96F /* DashboardViewController.swift */; };
 		8E0A43A7244A4A0400656518 /* ProfileTableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0A437A244A4A0400656518 /* ProfileTableItem.swift */; };
 		8E0A43A8244A4A0400656518 /* StaticProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0A437B244A4A0400656518 /* StaticProfileViewController.swift */; };
@@ -113,9 +110,6 @@
 			files = (
 				8E0A43CE244A60D800656518 /* Pods_CardinalKit_Example.framework in Frameworks */,
 				8E0A43D5244A693D00656518 /* HealthKit.framework in Frameworks */,
-				55346BD5250DBFBF00767347 /* CareKit in Frameworks */,
-				55346BD3250DBFBF00767347 /* CareKitUI in Frameworks */,
-				55346BD7250DBFBF00767347 /* CareKitStore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,9 +316,6 @@
 			);
 			name = CardinalKit_Example;
 			packageProductDependencies = (
-				55346BD2250DBFBF00767347 /* CareKitUI */,
-				55346BD4250DBFBF00767347 /* CareKit */,
-				55346BD6250DBFBF00767347 /* CareKitStore */,
 			);
 			productName = CardinalKit;
 			productReference = 607FACD01AFB9204008FA782 /* CardinalKit Example.app */;
@@ -358,7 +349,6 @@
 			);
 			mainGroup = 607FACC71AFB9204008FA782;
 			packageReferences = (
-				55346BD1250DBFBF00767347 /* XCRemoteSwiftPackageReference "CareKit" */,
 			);
 			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
 			projectDirPath = "";
@@ -609,8 +599,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -625,10 +614,7 @@
 				DEVELOPMENT_TEAM = 5K85H66MMW;
 				INFOPLIST_FILE = "CardinalKit/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.buildathon.beatHF;
 				PRODUCT_NAME = "CardinalKit Example";
@@ -649,10 +635,7 @@
 				DEVELOPMENT_TEAM = 5K85H66MMW;
 				INFOPLIST_FILE = "CardinalKit/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.buildathon.beatHF;
 				PRODUCT_NAME = "CardinalKit Example";
@@ -684,35 +667,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		55346BD1250DBFBF00767347 /* XCRemoteSwiftPackageReference "CareKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/carekit-apple/CareKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		55346BD2250DBFBF00767347 /* CareKitUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 55346BD1250DBFBF00767347 /* XCRemoteSwiftPackageReference "CareKit" */;
-			productName = CareKitUI;
-		};
-		55346BD4250DBFBF00767347 /* CareKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 55346BD1250DBFBF00767347 /* XCRemoteSwiftPackageReference "CareKit" */;
-			productName = CareKit;
-		};
-		55346BD6250DBFBF00767347 /* CareKitStore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 55346BD1250DBFBF00767347 /* XCRemoteSwiftPackageReference "CareKit" */;
-			productName = CareKitStore;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 607FACC81AFB9204008FA782 /* Project object */;
 }
