@@ -16,7 +16,7 @@ class HeartRateReview: UIViewController {
     @IBOutlet weak var noticeLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     var beats = [Int]()
-    var testWarning = true
+    var testWarning = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
