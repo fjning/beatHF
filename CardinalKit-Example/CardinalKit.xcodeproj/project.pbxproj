@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		55672439250DAE6900A5E96F /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55672438250DAE6900A5E96F /* DashboardViewController.swift */; };
+		55672439250DAE6900A5E96F /* HeartRateReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55672438250DAE6900A5E96F /* HeartRateReview.swift */; };
 		8E0A43A7244A4A0400656518 /* ProfileTableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0A437A244A4A0400656518 /* ProfileTableItem.swift */; };
 		8E0A43A8244A4A0400656518 /* StaticProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0A437B244A4A0400656518 /* StaticProfileViewController.swift */; };
 		8E0A43AA244A4A0400656518 /* WithdrawalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0A437F244A4A0400656518 /* WithdrawalViewController.swift */; };
@@ -60,7 +60,7 @@
 		07D78DA16FC9C3C7709EA243 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		1D31556B648F48DA664CEE80 /* Pods_CardinalKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardinalKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41DC264876E45FE5A3FD8701 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		55672438250DAE6900A5E96F /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = SOURCE_ROOT; };
+		55672438250DAE6900A5E96F /* HeartRateReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateReview.swift; sourceTree = SOURCE_ROOT; };
 		55C52667250DB03E00DA0ACC /* ResearchKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ResearchKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58275A0CAB0C7223B21F375D /* Pods-CardinalKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardinalKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-CardinalKit_Tests/Pods-CardinalKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* CardinalKit Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CardinalKit Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,7 +155,7 @@
 				8E0A4396244A4A0400656518 /* AppDelegate.swift */,
 				8EBE6F9B24B3C0E60093D07C /* AppDelegate+CardinalKit.swift */,
 				8E0A43CB244A4D7C00656518 /* Main.storyboard */,
-				55672438250DAE6900A5E96F /* DashboardViewController.swift */,
+				55672438250DAE6900A5E96F /* HeartRateReview.swift */,
 			);
 			name = "CardinalKit-Example";
 			path = CardinalKit;
@@ -458,7 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E0A43A8244A4A0400656518 /* StaticProfileViewController.swift in Sources */,
-				55672439250DAE6900A5E96F /* DashboardViewController.swift in Sources */,
+				55672439250DAE6900A5E96F /* HeartRateReview.swift in Sources */,
 				8E0A43C0244A4A0400656518 /* LoginStep.swift in Sources */,
 				8E0A43B3244A4A0400656518 /* StudyTasks.swift in Sources */,
 				8E40DC042471E5940027536B /* CKNetworkManager.swift in Sources */,
