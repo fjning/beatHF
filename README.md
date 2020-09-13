@@ -1,3 +1,7 @@
+<img src="https://github.com/CardinalKit/CardinalKit/blob/master/CardinalKit-Web-Assets/footer.png?raw=true" alt="biodesign logo">
+
+BUILDING FOR DIGITAL HEALTH: A VIRTUAL BUILDATHON
+Supported by Stanford Biodesign CardinalKit + Apple iOS + Google Cloud
 
 TEAM NAME: BeatHF 
 
@@ -24,4 +28,4 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 BeatHF is available under the MIT License license. See the LICENSE file for more info.
 
-<img src="https://github.com/CardinalKit/CardinalKit/blob/master/CardinalKit-Web-Assets/footer.png?raw=true" alt="biodesign logo">
+
