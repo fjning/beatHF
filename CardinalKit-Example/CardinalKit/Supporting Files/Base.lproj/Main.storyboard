@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pSR-Eb-xZI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pSR-Eb-xZI">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -186,6 +185,7 @@
         <!--View Controller-->
         <scene sceneID="G11-Zg-fZb">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7cb-Zq-kZE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="introThreeViewController" id="X2D-iZ-QZk" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FtE-yE-SaR"/>
@@ -256,7 +256,6 @@
                         <viewLayoutGuide key="safeArea" id="AcR-GO-hem"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7cb-Zq-kZE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2816" y="435"/>
         </scene>
@@ -369,9 +368,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <segue destination="Idw-HH-XGc" kind="relationship" relationship="viewControllers" id="caZ-P3-BBD"/>
                         <segue destination="JvU-YF-65o" kind="relationship" relationship="viewControllers" id="6EZ-5D-flS"/>
                         <segue destination="d4G-0T-hQK" kind="relationship" relationship="viewControllers" id="VOj-YB-IR1"/>
-                        <segue destination="Idw-HH-XGc" kind="relationship" relationship="viewControllers" id="caZ-P3-BBD"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jnR-i7-cma" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -675,8 +674,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="contact@domain.com" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sfD-Ek-IuZ">
-                                                    <rect key="frame" x="226.5" y="23" width="167.5" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="pjwang@stanford.edu" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sfD-Ek-IuZ">
+                                                    <rect key="frame" x="227" y="23" width="167" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="1" green="0.20784313730000001" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
@@ -760,6 +759,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="E7u-cq-9MY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Org-jj-OrZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sh3-v6-GtJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -794,11 +794,11 @@
             </objects>
             <point key="canvasLocation" x="2771" y="1231"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Heart Rate-->
         <scene sceneID="Wg7-I5-nae">
             <objects>
                 <navigationController id="Idw-HH-XGc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" selectedImage="star.fill" catalog="system" systemItem="favorites" id="pK2-uG-Wpp"/>
+                    <tabBarItem key="tabBarItem" title="Heart Rate" image="heart.fill" catalog="system" id="pK2-uG-Wpp"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uud-EU-71A">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -811,26 +811,54 @@
             </objects>
             <point key="canvasLocation" x="1019" y="1231"/>
         </scene>
-        <!--Dashboard View Controller-->
+        <!--Heart Rate Review-->
         <scene sceneID="CvX-cO-ohP">
             <objects>
                 <viewController id="dSx-E5-YWc" customClass="DashboardViewController" customModule="CardinalKit_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B2n-MF-Yh4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aPB-X1-Y6a">
+                                <rect key="frame" x="0.0" y="56.5" width="414" height="194"/>
+                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aPB-X1-Y6a" secondAttribute="height" multiplier="207:97" id="6BQ-3Q-qlN"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSV-Ot-y0q">
+                                <rect key="frame" x="0.0" y="281" width="414" height="178"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aPB-X1-Y6a" firstAttribute="leading" secondItem="Hwn-Ye-2RC" secondAttribute="leading" id="18o-cG-4hr"/>
+                            <constraint firstItem="aPB-X1-Y6a" firstAttribute="top" secondItem="Hwn-Ye-2RC" secondAttribute="top" constant="0.5" id="3Tl-2t-zlj"/>
+                            <constraint firstItem="cSV-Ot-y0q" firstAttribute="trailing" secondItem="aPB-X1-Y6a" secondAttribute="trailing" id="aLG-zE-3d5"/>
+                            <constraint firstItem="cSV-Ot-y0q" firstAttribute="top" secondItem="aPB-X1-Y6a" secondAttribute="bottom" constant="30.5" id="cOA-SQ-f6c"/>
+                            <constraint firstItem="cSV-Ot-y0q" firstAttribute="leading" secondItem="aPB-X1-Y6a" secondAttribute="leading" id="fET-Or-Nbv"/>
+                            <constraint firstItem="Hwn-Ye-2RC" firstAttribute="bottom" secondItem="cSV-Ot-y0q" secondAttribute="bottom" constant="300" id="mO7-ea-8T9"/>
+                            <constraint firstItem="aPB-X1-Y6a" firstAttribute="trailing" secondItem="Hwn-Ye-2RC" secondAttribute="trailing" id="oMR-fE-BXR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Hwn-Ye-2RC"/>
                     </view>
-                    <navigationItem key="navigationItem" id="2Yd-5r-s8j"/>
+                    <navigationItem key="navigationItem" title="Heart Rate Review" id="2Yd-5r-s8j"/>
+                    <connections>
+                        <outlet property="imageView" destination="aPB-X1-Y6a" id="F8k-wP-pXF"/>
+                        <outlet property="noticeLabel" destination="cSV-Ot-y0q" id="k7F-Ce-UlV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="911-Dk-Fh7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1019" y="1965"/>
+            <point key="canvasLocation" x="1018.840579710145" y="1964.7321428571427"/>
         </scene>
     </scenes>
     <resources>
         <image name="StanfordMedicine" width="328" height="56"/>
-        <image name="star.fill" catalog="system" width="64" height="58"/>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="tab_activities" width="23" height="23"/>
         <image name="tab_profile" width="24" height="24"/>
     </resources>

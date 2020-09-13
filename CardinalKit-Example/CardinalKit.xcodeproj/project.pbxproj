@@ -334,7 +334,7 @@
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = 5K85H66MMW;
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1170;
 					};
 				};
 			};

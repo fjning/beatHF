@@ -34,25 +34,25 @@ class ConsentDocument: ORKConsentDocument {
         
         title = NSLocalizedString(consentTitle, comment: "")
         
-//        let sectionTypes: [ORKConsentSectionType] = [
-//            .overview,
-//            .dataGathering,
-//            .privacy,
-//            .dataUse,
-//            .timeCommitment,
-//            .studySurvey,
-//            .studyTasks,
-//            .withdrawing
-//        ]
+        let sectionTypes: [ORKConsentSectionType] = [
+            .overview,
+            .dataGathering,
+            .privacy,
+            .dataUse,
+            .timeCommitment,
+            .studySurvey,
+            .studyTasks,
+            .withdrawing
+        ]
 //
-//        let keys = ["Overview", "Data Gathering", "Privacy", "Data Use", "Time Commitment", "Study Survey", "Study Tasks", "Withdrawing"]
+        let keys = ["Overview", "Data Gathering", "Privacy", "Data Use", "Time Commitment", "Study Survey", "Study Tasks", "Withdrawing"]
 
-		let sectionTypes: [ORKConsentSectionType] = [
-				   .overview
-			   ]
-
-		let keys = ["Overview"]
-        
+//		let sectionTypes: [ORKConsentSectionType] = [
+//				   .overview
+//			   ]
+//
+//		let keys = ["Overview"]
+//
         let consentForm = config.readDict(query: "Consent Form")
         sections = []
         
