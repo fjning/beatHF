@@ -81,7 +81,7 @@ extension StaticProfileViewController : MFMailComposeViewControllerDelegate {
     func sendEmail() {
         let mailComposeViewController = MFMailComposeViewController()
         mailComposeViewController.mailComposeDelegate = self
-        mailComposeViewController.setToRecipients(["contact@domain.com"])
+        mailComposeViewController.setToRecipients(["pjwang@stanford.edu"])
         mailComposeViewController.setSubject("Support Request")
         mailComposeViewController.setMessageBody("Enter your support request here.", isHTML: false)
         

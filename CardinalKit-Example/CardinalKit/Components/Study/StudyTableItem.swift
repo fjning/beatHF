@@ -27,7 +27,7 @@ enum StudyTableItem: Int {
     var title: String {
         switch self {
         case .survey:
-            return "Discharge Survey"
+            return "Daily Survey"
 		}
 
     }
@@ -35,7 +35,7 @@ enum StudyTableItem: Int {
     var subtitle: String {
         switch self {
         case .survey:
-            return "A daily survey for patients with advanced congestive heart failure."
+            return "A survey for patients with advanced congestive heart failure."
 		}
 
     }

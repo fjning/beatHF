@@ -33,6 +33,7 @@ class Constants {
         // Surveys
         static let MedicalSurvey = "\(app).medicalSurvey"
         static let SF12Survey = "\(app).sf12Survey"
+        static let DailySurvey = "\(app).dailySurvey"
         static let SurgicalSurvey = "\(app).surgicalSurvey"
         static let PhysicalSurvey = "\(app).physicalSurvey"
         

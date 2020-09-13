@@ -79,7 +79,7 @@ extension StudyTableViewController {
               If we selected this element in our table, then wrap our `StudyTasks.sf12Task` in a
              `ResearchKit` task view controller. See `StudyTasks` for `ORKTask` implementation.
              */
-            taskViewController = ORKTaskViewController(task: StudyTasks.sf12Task, taskRun: NSUUID() as UUID)
+            taskViewController = ORKTaskViewController(task: StudyTasks.dailySurvey, taskRun: NSUUID() as UUID)
 
 //        case .activeTask:
 //            /**
@@ -109,7 +109,7 @@ extension StudyTableViewController : ORKTaskViewControllerDelegate {
     func taskViewController(_ taskViewController: ORKTaskViewController, didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
         
         
-        let alertTitle = "Attention"
+        var alertTitle = ""
         var alertMessage = ""
         
         let yellowMessage = "You should contact your doctor today".capitalized
@@ -146,27 +146,34 @@ extension StudyTableViewController : ORKTaskViewControllerDelegate {
                 if identifier == "activeQuestionStep" {
                     if alertMessage != redMessage && alertMessage != orangeMessage {
                         alertMessage = yellowMessage
+                        alertTitle = "Code Yellow"
                     }
                 } else if identifier == "restingQuestionStep" {
                     if alertMessage != redMessage {
                         alertMessage = orangeMessage
+                        alertTitle = "Code Orange"
                     }
                 } else if identifier == "awayQuestionStep" {
                     alertMessage = redMessage
+                    alertTitle = "Code Red"
                 } else if identifier == "gainedQuestionStep" {
                     if alertMessage != redMessage && alertMessage != orangeMessage {
                         alertMessage = yellowMessage
+                        alertTitle = "Code Yellow"
                     }
                 } else if identifier == "pillowsQuestionStep" {
                     if alertMessage != redMessage && alertMessage != orangeMessage {
                         alertMessage = yellowMessage
+                        alertTitle = "Code Yellow"
                     }
                 } else if identifier == "wakeQuestionStep" {
                     if alertMessage != redMessage {
                         alertMessage = orangeMessage
+                        alertTitle = "Code Orange"
                     }
                 } else if identifier == "passOutQuestionStep" {
                     alertMessage = redMessage
+                    alertTitle = "Code Red"
                 }
 
             }

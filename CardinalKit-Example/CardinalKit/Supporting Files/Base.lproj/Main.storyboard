@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pSR-Eb-xZI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pSR-Eb-xZI">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -65,7 +65,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0a-gy-nwk">
-                                        <rect key="frame" x="20" y="208.5" width="374" height="64.5"/>
+                                        <rect key="frame" x="20" y="208.5" width="374" height="86.5"/>
                                         <string key="text">A better way to reduce hospital readmissions for heart failure in non-hospitalized patients with heart failure to improve outcomes, improve quality of life, and reduce cost </string>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <nil key="textColor"/>
@@ -371,6 +371,7 @@
                     <connections>
                         <segue destination="JvU-YF-65o" kind="relationship" relationship="viewControllers" id="6EZ-5D-flS"/>
                         <segue destination="d4G-0T-hQK" kind="relationship" relationship="viewControllers" id="VOj-YB-IR1"/>
+                        <segue destination="Idw-HH-XGc" kind="relationship" relationship="viewControllers" id="caZ-P3-BBD"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jnR-i7-cma" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -764,9 +765,72 @@
             </objects>
             <point key="canvasLocation" x="2772" y="1965"/>
         </scene>
+        <!--Root View Controller-->
+        <scene sceneID="Q0W-PF-1rK">
+            <objects>
+                <tableViewController id="jQy-dd-k5f" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FI7-jK-ecE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="OKV-qg-wN9">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OKV-qg-wN9" id="R6e-HQ-ePP">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jQy-dd-k5f" id="Xa0-0T-Hk9"/>
+                            <outlet property="delegate" destination="jQy-dd-k5f" id="4Od-Ju-x2R"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="KZ1-lg-0iP"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lLU-fr-lgt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2771" y="1231"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Wg7-I5-nae">
+            <objects>
+                <navigationController id="Idw-HH-XGc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" selectedImage="star.fill" catalog="system" systemItem="favorites" id="pK2-uG-Wpp"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uud-EU-71A">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dSx-E5-YWc" kind="relationship" relationship="rootViewController" id="dw0-Nf-e4L"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TB7-cM-SRZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1019" y="1231"/>
+        </scene>
+        <!--Dashboard View Controller-->
+        <scene sceneID="CvX-cO-ohP">
+            <objects>
+                <viewController id="dSx-E5-YWc" customClass="DashboardViewController" customModule="CardinalKit_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B2n-MF-Yh4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Hwn-Ye-2RC"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2Yd-5r-s8j"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="911-Dk-Fh7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1019" y="1965"/>
+        </scene>
     </scenes>
     <resources>
         <image name="StanfordMedicine" width="328" height="56"/>
+        <image name="star.fill" catalog="system" width="64" height="58"/>
         <image name="tab_activities" width="23" height="23"/>
         <image name="tab_profile" width="24" height="24"/>
     </resources>

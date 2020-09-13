@@ -31,7 +31,7 @@ struct StudyTasks {
     /**
      Sample task created step-by-step!
     */
-    static let sf12Task: ORKOrderedTask = {
+    static let dailySurvey: ORKOrderedTask = {
         var steps = [ORKStep]()
 
         let yesNoAnswer = ORKBooleanAnswerFormat(yesString: "Yes", noString: "No")
@@ -58,7 +58,7 @@ struct StudyTasks {
         steps += [medicationQuestionStep,breathQuestionStep,activeQuestionStep,restingQuestionStep,awayQuestionStep,gainedQuestionStep,sleepQuestionStep,pillowsQuestionStep,wakeQuestionStep,dizzyQuestionStep,passOutQuestionStep,rapidQuestionStep,chestQuestionStep,swellingQuestionStep,summaryStep]
 
 		// Form a task
-		var task = ORKNavigableOrderedTask(identifier: "SurveyTask-SF12", steps: steps)
+		var task = ORKNavigableOrderedTask(identifier: "DailySurveyBeatHF", steps: steps)
 
 		//  Expected answer - (usually No) - Skips to the next question
 		var resultSelector = ORKResultSelector(resultIdentifier: "breathQuestionStep")
